@@ -1,0 +1,229 @@
+
+.uk-container {
+    max-width: 100%;
+    padding: 0 0px;
+}
+html {
+    font-size: 16px;
+}
+
+.pore {
+    position: relative;
+}
+
+.poab {
+    position: absolute;
+}
+.allwh{
+    width: 100%;
+    height: 100%;
+}
+.mt10p {
+    margin-top: 10%;
+}
+
+.top20 {
+    top: 20% !important;
+}
+.top30 {
+    top: 30% !important;
+}
+.top40 {
+    top: 40% !important;
+}
+
+.page1 {
+    background: url('../img/bag.jpg');
+    background-size: cover;
+}
+
+
+.contain {
+    padding-top: 1%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 10%;
+}
+
+.logo img {
+    height: 90%;
+    padding-left: 80px;
+}
+
+.logo-title {
+    color: white;
+}
+
+.container {
+    position: absolute;
+    top: 56px;
+    left: 15px;
+    width: 225px;
+    height: 385px;
+    overflow: hidden;
+    z-index: -100;
+    background-color: #ffffff;
+
+}
+
+.phoneImg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 220px;
+    height: 380px;
+}
+.contact {
+    margin-top: 5%;
+    width: 150px;
+    height: auto;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-delay: 3s;
+}
+.android-download, .iphone-download {
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-delay: 0.5s;
+}
+
+.android-download {
+    display: block;
+    width: 75%;
+    background-size: cover;
+}
+
+.iphone-download {
+    margin-top: 5%;
+    display: block;
+    width: 75%;
+    height: 15%;
+    background-size: cover;
+}
+
+.phone-contain {
+    position: relative;
+    top: 10%;
+    width: 244px;
+    height: 500px;
+    z-index: 100;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 2s;
+
+}
+
+.bg-phone {
+    width: 100%;
+    height: auto;
+}
+
+.page2, .page3, .page4 {
+    background-color: #fff;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.page2-image, .page3-image {
+    position: absolute;
+    left: 20%;
+    bottom: 0;
+    width: 60%;
+    height: auto;
+}
+
+.page3-image {
+    left: 25%;
+    width: 50%;
+
+}
+
+.page2-title, .page3-title {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0%;
+    top: 10%;
+    font-size: 50px;
+    height: 50px;
+}
+
+
+
+@media all and (max-width: 768px) {
+    .page1{
+
+        background: #F44336;
+
+        /*background: url('../img/mobile-bg.png');*/
+        background-size: cover;
+
+    }
+    .down-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: url("../img/down_swiper_white_bg.png");
+        background-size:cover ;
+    }
+    .mobile-img{
+        width: 99%;
+        height: auto;
+        margin-top: 10%;
+        margin-left: 11%;
+    }
+    .logo img {
+        height: 70%;
+        padding-left: 5%;
+    }
+    .uk-box{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+    }
+    .page-text{
+        margin-left: 5%;
+       margin-top: 10%;
+    }
+    .download-btn{
+        position: absolute;
+        bottom: 6.6%;
+        left: 25%;
+        width: 50%;
+        line-height: 45px;
+        text-align: center;
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 36px;
+    }
+    .page3-image{
+        width: 90%;
+        left: 5%;
+    }
+    .page2-title{
+
+        font-size: 30px;
+        height: 30px;
+
+    }
+    .page4-title {
+        margin: 5%;
+        font-size: 25px;
+        font-weight: bold;
+
+    }
+
+    .page4-image {
+        width: 10%;
+        min-width: 180px;
+    }
+
+}

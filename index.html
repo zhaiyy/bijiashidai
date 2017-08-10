@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="keywords" content="币加时代"/>
+    <meta name="description" content="给虚拟币交易者提供最及时的数据可视化的交易行情信息"/>
+    <title>币加时代</title>
+    <link rel="shortcut icon" href="img/logo.png">
+
+    <link rel="stylesheet" href="css/jquery.fullPage.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/uikit.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+</head>
+
+
+<body>
+<div>
+
+    <div class="main uk-container ">
+
+        <div class="section  page1">
+            <div class="uk-hidden-small">
+                <div class="logo">
+                    <img src="img/logo.png" class="animated logo-img fadeInDownBig">
+                    <span style="color: #fff" class="animated fadeInDownBig">币加时代</span>
+                </div>
+                <div class="contain uk-grid">
+                    <div class=" uk-width-1-2 pore" style="padding-top: 5%;padding-left: 20%;">
+                        <img src="img/qq.jpg" class="contact  animated pulse">
+                        <br/>
+                        <img src="img/weixin.jpg" class="contact  animated pulse">
+                        <a class="iphone-download animated fadeInDownBig" target="_blank"
+                           href="https://itunes.apple.com/us/app/%E5%B8%81%E5%8A%A0%E6%97%B6%E4%BB%A3/id1268266149">
+                            <img src="img/iPhonedownload.png">
+                        </a>
+                        <a class="android-download animated fadeInDownBig" title="开发中，请等待...">
+                            <img src="img/Androiddownload.png">
+                        </a>
+
+                    </div>
+                    <div class=" uk-width-1-2 pore">
+                        <div class="phone-contain animated fadeInRightBig">
+                            <img class="bg-phone " src="img/iphone.png">
+                            <div class="container">
+                                <img class="phoneImg iphone1 animated " src="img/iphone1.png">
+                                <img class="phoneImg iphone2 animated" src="img/iphone2.png">
+                                <img class="phoneImg iphone3 animated" src="img/iphone3.png">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="uk-visible-small">
+                <div class="down-bg">
+                    <img src="img/mobilephone2.png" class="mobile-img animated slideInRight">
+                </div>
+                <div class="logo">
+                    <img src="img/logo.png" class="animated logo-img fadeInDownBig">
+                </div>
+                <div class="uk-box">
+                    <img src="img/page-text.png" class="page-text animated fadeInDownBig">
+                    <div class="download-btn animated fadeInUpBig">立即体验</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section  page2">
+            <div class="uk-hidden-small">
+                <div class="page2-title animated" style="font-weight: bold">短线助手</div>
+                <div class="page2-title animated top20">分秒
+                    <span style="color: red">必挣</span>
+                </div>
+
+                <img class="page2-image animated" src="img/mobilephone1.png">
+            </div>
+            <div class="uk-visible-small">
+                <div class="page2-title animated" style="font-weight: bold">短线助手</div>
+                <div class="page2-title animated top20">分秒
+                    <span style="color: red">必挣</span>
+                </div>
+                <div class="page2-title animated top30" style="font-weight: bold">还原最直观的</div>
+                <div class="page2-title animated top40">
+                    <span style="color: red">流入流出</span>
+                </div>
+                <img class="page3-image animated" src="img/mobilephone4.png">
+            </div>
+
+        </div>
+
+        <div class="section  page3">
+            <div class="uk-hidden-small">
+
+                <div class="page3-title animated" style="font-weight: bold">还原最直观的</div>
+                <div class="page3-title animated top20">
+                    <spa style="color: red">流入流出</spa>
+                </div>
+
+                <img class="page3-image animated" src="img/mobilephone4.png">
+            </div>
+            <div class="uk-visible-small allwh">
+                <div class="page4-title">联系我们</div>
+                <img src="img/qq.jpg" class=" page4-image animated">
+                <br/>
+                <img src="img/weixin.jpg" class=" page4-image animated">
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/jquery-1.9.0.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+
+    <script>
+        $(function () {
+            var u = navigator.userAgent;
+            var o = {
+                isiOS: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                urlIOS: 'https://itunes.apple.com/us/app/%E5%B8%81%E5%8A%A0%E6%97%B6%E4%BB%A3/id1268266149',
+                urlAndroid: ''
+            };
+            $('.download-btn').bind('click', function () {
+                if (!o.isiOS) {
+                    alert('程序小哥正在加紧开发中...');
+                    return;
+                }
+                window.location.href = o.isiOS ? o.urlIOS : o.urlAndroid;
+            });
+            $('.main').fullpage({
+                afterLoad: function (anchorLink, index) {
+                    switch (index) {
+                        case 1:
+                            break;
+
+                        case 2:
+                            $('.page2-title').addClass('slideInDown');
+                            $('.page2-image').addClass('slideInUp');
+                            setTimeout(function () {
+                                $('.page2-title').removeClass('slideInDown');
+                                $('.page2-image').removeClass('slideInUp');
+                            }, 1000);
+                            break;
+
+                        case 3:
+                            $('.page3-title').addClass('slideInDown');
+                            $('.page3-image').addClass('slideInUp');
+                            setTimeout(function () {
+                                $('.page3-title').removeClass('slideInDown');
+                                $('.page3-image').removeClass('slideInUp');
+                            }, 1000);
+                            break;
+                    }
+
+                }
+            });
+
+            var leftAry = [$('.iphone1'), $('.iphone2'), $('.iphone3')];
+            var i = 0;
+
+            function setLeft() {
+                if (i == 0) {
+                    leftAry[2].addClass('fadeOutLeft');
+                } else {
+                    leftAry[i - 1].addClass('fadeOutLeft');
+                }
+                leftAry[i].removeClass('fadeOutLeft').addClass('fadeInRight');
+
+                i++;
+                if (i == 3) {
+                    i = 0;
+                }
+            }
+
+            window.setInterval(setLeft, 3000);
+        });
+
+    </script>
+</body>
+
+</html>
