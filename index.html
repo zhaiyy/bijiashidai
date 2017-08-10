@@ -21,28 +21,40 @@
 <div>
 
     <div class="main uk-container ">
-
         <div class="section  page1">
             <div class="uk-hidden-small">
                 <div class="logo">
                     <img src="img/logo.png" class="animated logo-img fadeInDownBig">
-                    <span style="color: #fff" class="animated fadeInDownBig">币加时代</span>
                 </div>
                 <div class="contain uk-grid">
-                    <div class=" uk-width-1-2 pore" style="padding-top: 5%;padding-left: 20%;">
-                        <img src="img/qq.jpg" class="contact  animated pulse">
-                        <br/>
-                        <img src="img/weixin.jpg" class="contact  animated pulse">
-                        <a class="iphone-download animated fadeInDownBig" target="_blank"
-                           href="https://itunes.apple.com/us/app/%E5%B8%81%E5%8A%A0%E6%97%B6%E4%BB%A3/id1268266149">
-                            <img src="img/iPhonedownload.png">
-                        </a>
-                        <a class="android-download animated fadeInDownBig" title="开发中，请等待...">
-                            <img src="img/Androiddownload.png">
-                        </a>
+                    <div class=" uk-width-3-5 pore" style="padding-top: 5%;padding-left: 20%;">
+                        <img src="img/page-text.png" class="page-text animated fadeInDownBig">
+                        <!-- <img src="img/qq.jpg" class="contact  animated pulse">
+                         <br/>
+                         <img src="img/weixin.jpg" class="contact  animated pulse">
+                         <a class="iphone-download animated fadeInDownBig" target="_blank"
+                            href="https://itunes.apple.com/us/app/%E5%B8%81%E5%8A%A0%E6%97%B6%E4%BB%A3/id1268266149">
+                             <img src="img/iPhonedownload.png">
+                         </a>
+                         <a class="android-download animated fadeInDownBig" title="开发中，请等待...">
+                             <img src="img/Androiddownload.png">
+                         </a>-->
+                        <div class="uk-btn-box">
+                            <div class="download-btn animated fadeInUpBig">立即体验</div>
+                            <div class="uk-hover-box uk-hidden">
+                                <img src="img/download.png">
+                            </div>
+                        </div>
+                        <div class="uk-btn-box">
+                            <div class="download-btn animated fadeInUpBig">联系我们</div>
+                            <div class="uk-hover-box uk-hidden uk-contact">
+                                <img src="img/qq.jpg">
+                                <img src="img/weixin.jpg">
+                            </div>
+                        </div>
 
                     </div>
-                    <div class=" uk-width-1-2 pore">
+                    <div class=" uk-width-2-5 pore">
                         <div class="phone-contain animated fadeInRightBig">
                             <img class="bg-phone " src="img/iphone.png">
                             <div class="container">
@@ -58,6 +70,7 @@
                 </div>
             </div>
             <div class="uk-visible-small">
+
                 <div class="down-bg">
                     <img src="img/mobilephone2.png" class="mobile-img animated slideInRight">
                 </div>
@@ -96,7 +109,6 @@
 
         <div class="section  page3">
             <div class="uk-hidden-small">
-
                 <div class="page3-title animated" style="font-weight: bold">还原最直观的</div>
                 <div class="page3-title animated top20">
                     <spa style="color: red">流入流出</spa>
@@ -120,19 +132,11 @@
 
     <script>
         $(function () {
-            var u = navigator.userAgent;
-            var o = {
-                isiOS: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-                urlIOS: 'https://itunes.apple.com/us/app/%E5%B8%81%E5%8A%A0%E6%97%B6%E4%BB%A3/id1268266149',
-                urlAndroid: ''
-            };
-            $('.download-btn').bind('click', function () {
-                if (!o.isiOS) {
-                    alert('程序小哥正在加紧开发中...');
-                    return;
-                }
-                window.location.href = o.isiOS ? o.urlIOS : o.urlAndroid;
-            });
+            $('.uk-btn-box').bind('mouseover', function (e) {
+                $(this).find('.uk-hover-box').removeClass('uk-hidden')
+            }).bind('mouseout', function () {
+                $(this).find('.uk-hover-box').addClass('uk-hidden')
+            })
             $('.main').fullpage({
                 afterLoad: function (anchorLink, index) {
                     switch (index) {

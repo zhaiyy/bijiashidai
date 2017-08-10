@@ -33,7 +33,7 @@ html {
 }
 
 .page1 {
-    background: url('../img/bag.jpg');
+    background: url('../img/bg.png');
     background-size: cover;
 }
 
@@ -87,6 +87,7 @@ html {
     -webkit-animation-duration: 1.5s;
     -webkit-animation-delay: 3s;
 }
+
 .android-download, .iphone-download {
     -webkit-animation-duration: 1.5s;
     -webkit-animation-delay: 0.5s;
@@ -153,7 +154,36 @@ html {
 }
 
 
+@media all and (min-width: 768px) {
+    .uk-btn-box{
+        display: inline-block;
+        position: relative;
+        width: 35%;
+        margin: 10% 2%;
 
+
+    }
+    .download-btn{
+        width: 100%;
+        line-height: 45px;
+        text-align: center;
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 36px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .uk-hover-box{
+        position: absolute;
+        top: -50%;
+        left: 0%;
+        width: 90%;
+        padding: 20px;
+        background-color: #fff;
+    }
+    .uk-contact{
+        top: -250%;
+    }
+}
 @media all and (max-width: 768px) {
     .page1{
 
